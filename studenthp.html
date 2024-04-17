@@ -9,17 +9,21 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0;
   }
 
   .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    position: relative; /* Make container position relative for absolute positioning */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   h1 {
     color: #333;
+    margin-bottom: 20px;
   }
 
   h2 {
@@ -35,25 +39,7 @@
     margin-bottom: 10px;
   }
 
-  form {
-    margin-top: 20px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  input[type="text"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  input[type="submit"] {
+  .action-btn {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -62,14 +48,11 @@
     cursor: pointer;
   }
 
-  input[type="submit"]:hover {
+  .action-btn:hover {
     background-color: #45a049;
   }
 
   .logout-btn {
-    position: absolute;
-    top: 20px; /* Adjust top position */
-    right: 20px; /* Adjust right position */
     background-color: #f44336;
     color: white;
     padding: 10px 20px;
@@ -90,7 +73,11 @@
     <h1>Welcome to Your Dashboard, Student!</h1>
     
     <h2>Course Catalog</h2>
-    <!-- Display course catalog -->
+    <ul>
+      <li>Computer Science: Introduction to Programming <button class="action-btn">Enroll</button></li>
+      <li>Computer Science: Algorithms and Data Structures <button class="action-btn">Enroll</button></li>
+      <li>Computer Science: Web Development <button class="action-btn">Enroll</button></li>
+    </ul>
 
     <h2>Enrolled Courses</h2>
     <!-- Display enrolled courses -->
@@ -98,10 +85,8 @@
     <h2>Discussion Forum</h2>
     <h3>Threads</h3>
     <ul>
-      <!-- Display list of discussion threads -->
       <li><a href="/view_thread/1">Thread 1</a></li>
       <li><a href="/view_thread/2">Thread 2</a></li>
-      <!-- Add more threads as needed -->
     </ul>
 
     <h3>Create New Thread</h3>
